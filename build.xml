@@ -38,7 +38,6 @@
          This file is an integral part of the build system for your
          application and should be checked into Version Control Systems. -->
     <loadproperties srcFile="project.properties" />
-	<property name="test.runner" value="pl.polidea.instrumentation.PolideaInstrumentationTestRunner" />
 	<property name="test.report" value="test-report" />
 	
     <!-- quick check on sdk.dir -->
@@ -90,7 +89,7 @@
 
         <property name="tested.project.absolute.dir" location="${tested.project.dir}" />
 
-        <property name="test.runner" value="android.test.InstrumentationTestRunner" />
+        <property name="test.runner" value="pl.polidea.instrumentation.PolideaInstrumentationTestRunner" />
 
         <!-- Application package of the tested project extracted from its manifest file -->
         <xpath input="${tested.project.absolute.dir}/AndroidManifest.xml"
@@ -128,13 +127,13 @@
                             <include name="coverage.em" />
                         </infileset>
                         <!-- TODO: reports in other, indicated by user formats -->
-                        <html outfile="coverage.html" />
+                        <xml outfile="coverage.xml" />
                    </report>
                 </emma>
                 <echo>Cleaning up temporary files...</echo>
                 <delete file="coverage.ec" />
                 <delete file="coverage.em" />
-                <echo>Saving the report file in ${basedir}/coverage/coverage.html</echo>
+                <echo>Saving the report file in ${basedir}/coverage/coverage.xml</echo>
             </then>
             <else>
                 <run-tests-helper />

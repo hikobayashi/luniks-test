@@ -6,5 +6,7 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/luniks-app"/>
 	<classpathentry kind="lib" path="libs/polidea_test_runner_1.1.jar"/>
+	<classpathentry kind="lib" path="libs/emma_ant.jar"/>
+	<classpathentry kind="lib" path="libs/emma.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

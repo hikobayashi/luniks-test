@@ -84,6 +84,7 @@
          In all cases you must update the value of version-tag below to read 'custom' instead of an integer,
          in order to avoid having your file be overridden by tools such as "android update project"
     -->
+
     <target name="test" depends="-test-project-check"
                 description="Runs tests from the package defined in test.package property">
 
@@ -133,7 +134,7 @@
                 <echo>Cleaning up temporary files...</echo>
                 <delete file="coverage.ec" />
                 <delete file="coverage.em" />
-                <echo>Saving the report file in ${basedir}/coverage/coverage.xml</echo>
+                <echo>Saving the report file in coverage.xml</echo>
             </then>
             <else>
                 <run-tests-helper />
